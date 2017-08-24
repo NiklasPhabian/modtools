@@ -1,0 +1,36 @@
+#!/bin/bash
+
+cp /opt/scidb/12.7/etc/config.ini.4 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/1km/5i
+FOLDERS=('MOD*')
+time load2scidb $FOLDERS > load2scidb_1km_5i.csv
+echo "1km - Loaded for 5 instances."
+
+cp /opt/scidb/12.7/etc/config.ini.3 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/1km/4i
+FOLDERS=('MOD*')
+time load2scidb $FOLDERS > load2scidb_1km_4i.csv
+echo "1km - Loaded for 4 instances."
+
+cp /opt/scidb/12.7/etc/config.ini.2 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/1km/3i
+FOLDERS=('MOD*')
+time load2scidb $FOLDERS > load2scidb_1km_3i.csv
+echo "1km - Loaded for 3 instances."
+
+cp /opt/scidb/12.7/etc/config.ini.1 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/1km/2i
+FOLDERS=('MOD*')
+time load2scidb $FOLDERS > load2scidb_1km_2i.csv
+echo "1km - Loaded for 2 instances."
+
+cp /opt/scidb/12.7/etc/config.ini.0 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/1km/1i
+FOLDERS=('MOD*')
+time load2scidb $FOLDERS > load2scidb_1km_1i.csv
+echo "1km - Loaded for 1 instance."

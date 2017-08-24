@@ -1,0 +1,2 @@
+#!/bin/sh
+java -Xms512m -Xmx4096m -server -jar /modtools/mod2csv.jar "$@"

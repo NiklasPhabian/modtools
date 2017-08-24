@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SCIDB_FOLDER=/data/scidb/000
+SCHEMA_FOLDER=/modtools/schema
+
+scidb.py stopall modisdb
+sleep 5
+rm -r $SCIDB_FOLDER/0/* $SCIDB_FOLDER/1/* $SCIDB_FOLDER/2/* $SCIDB_FOLDER/3/* $SCIDB_FOLDER/4/* > /dev/null 2>&1
+/etc/init.d/postgresql restart
+scidb.py initall modisdb > /dev/null 2>&1
+rm -r $SCIDB_FOLDER/0-* > /dev/null 2>&1
+scidb.py startall modisdb
+sleep 5
+iquery -af $SCHEMA_FOLDER/schema.afl
+iquery -anq "load(platforms,'$SCHEMA_FOLDER/platforms.dlf')"
+iquery -anq "load(bands,'$SCHEMA_FOLDER/bands.dlf')"
+iquery -anq "load(resolutions,'$SCHEMA_FOLDER/resolutions.dlf')"

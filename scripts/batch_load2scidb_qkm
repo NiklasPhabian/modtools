@@ -1,0 +1,46 @@
+#!/bin/bash
+
+echo "Starting 5 Instance Data Load ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.4 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/qkm/5i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_qkm_5i.csv
+echo "Finished 5 Instance Data Load ("$(date)")."
+
+echo "Starting 4 Instance Data Load ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.3 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/qkm/4i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_qkm_4i.csv
+echo "Finished 4 Instance Data Load ("$(date)")."
+
+echo "Starting 3 Instance Analysis ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.2 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/qkm/3i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_qkm_3i.csv
+echo "Finished 3 Instance Data Load ("$(date)")."
+
+echo "Starting 2 Instance Data Load ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.1 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/qkm/2i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_qkm_2i.csv
+echo "Finished 2 Instance Data Load ("$(date)")."
+
+echo "Starting 1 Instance Data Load ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.0 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/qkm/1i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_qkm_1i.csv
+echo "Finished 1 Instance Data Load ("$(date)")."

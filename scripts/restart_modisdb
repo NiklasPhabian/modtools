@@ -1,0 +1,5 @@
+#!/bin/bash
+
+scidb.py stopall modisdb
+/etc/init.d/postgresql restart
+scidb.py startall modisdb

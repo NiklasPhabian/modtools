@@ -1,0 +1,60 @@
+#!/bin/bash
+
+echo "Starting 5 Instance Analysis ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.4 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/hkm/5i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_hkm_5i.csv
+echo "Data Loaded. Running Benchmarks ("$(date)")..."
+run_benchmarks > benchmarks_hkm_5i.log
+echo "Finished 5 Instance Analysis ("$(date)")."
+
+
+echo "Starting 4 Instance Analysis ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.3 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/hkm/4i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_hkm_4i.csv
+echo "Data Loaded. Running Benchmarks ("$(date)")..."
+run_benchmarks > benchmarks_hkm_4i.log
+echo "Finished 4 Instance Analysis ("$(date)")."
+
+
+echo "Starting 3 Instance Analysis ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.2 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/hkm/3i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_hkm_3i.csv
+echo "Data Loaded. Running Benchmarks ("$(date)")..."
+run_benchmarks > benchmarks_hkm_3i.log
+echo "Finished 3 Instance Analysis ("$(date)")."
+
+
+echo "Starting 2 Instance Analysis ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.1 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/hkm/2i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_hkm_2i.csv
+echo "Data Loaded. Running Benchmarks ("$(date)")..."
+run_benchmarks > benchmarks_hkm_2i.log
+echo "Finished 2 Instance Analysis ("$(date)")."
+
+
+echo "Starting 1 Instance Analysis ("$(date)")..."
+scidb.py stopall modisdb > /dev/null
+cp /opt/scidb/12.7/etc/config.ini.0 /opt/scidb/12.7/etc/config.ini
+reinit_modisdb > /dev/null
+cd ~/dlf/hkm/1i
+FOLDERS=('MOD*')
+load2scidb $FOLDERS > load2scidb_hkm_1i.csv
+echo "Data Loaded. Running Benchmarks ("$(date)")..."
+run_benchmarks > benchmarks_hkm_1i.log
+echo "Finished 1 Instance Analysis ("$(date)")."

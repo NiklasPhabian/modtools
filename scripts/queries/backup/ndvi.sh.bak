@@ -1,0 +1,101 @@
+#!/bin/bash
+
+#=Parameters=================================
+platform=1
+startTime=201203000000
+stopTime=201205000000
+startLongitude=-125000000
+startLatitude=20000000
+#============================================
+qkmOverlapCells=2253
+
+lonTiles=6000
+lonCellsPerTile=10000
+lonSize=$(($lonTiles * $lonCellsPerTile))
+stopLongitude=$(($startLongitude + $lonSize - 1))
+lonBlurWindowSize=$(($lonCellsPerTile + $qkmOverlapCells))
+
+latTiles=2500
+latCellsPerTile=10000
+latSize=$(($latTiles * $latCellsPerTile))
+stopLatitude=$(($startLatitude + $latSize - 1))
+latBlurWindowSize=$(($latCellsPerTile + $qkmOverlapCells))
+
+xDimEnd=$(($lonSize - 1))
+yDimEnd=$(($latSize - 1))
+
+ndviSchema="<ndvi:double NULL>[x=0:$xDimEnd,1000000,0,y=0:$yDimEnd,1000000,0]"
+iquery -anq "remove(ndvi_points)" > /dev/null 2>&1
+iquery -anq "create immutable empty array ndvi_points $ndviSchema" > /dev/null 2>&1
+
+echo "Calculating NDVI point values..."
+time iquery -anq "
+  redimension_store(
+    apply(
+      join(
+        attribute_rename(
+          between(
+            band_1_measurements,
+            $startLongitude, $startLatitude, $startTime, $platform, 0,
+            $stopLongitude, $stopLatitude, $stopTime, $platform, 0
+          ),
+          reflectance,
+          red
+        ),
+        attribute_rename(
+          between(
+            band_2_measurements,
+            $startLongitude, $startLatitude, $startTime, $platform, 0,
+            $stopLongitude, $stopLatitude, $stopTime, $platform, 0
+          ),
+          reflectance,
+          nir
+        )
+      ),
+      x, longitude_e6 - $startLongitude,
+      y, latitude_e6 - $startLatitude,
+      ndvi, (nir - red) / (nir + red)
+    ),
+    ndvi_points,
+    max(ndvi) as ndvi
+  )"
+echo "Done."
+
+echo "Generating grid centers..."
+iquery -anq "remove(ndvi_grid_centers)" > /dev/null 2>&1
+iquery -anq "create immutable empty array ndvi_grid_centers $ndviSchema" > /dev/null 2>&1
+
+time iquery -anq "
+  redimension_store(
+    apply(
+      cross(
+        build(<x:int64>[i=1:$lonTiles,1000,0], $lonCellsPerTile * (i - 0.5)),
+        build(<y:int64>[i=1:$latTiles,1000,0], $latCellsPerTile * (i - 0.5))
+      ),
+      ndvi, double (null)
+    ),
+    ndvi_grid_centers
+  )"
+echo "Done."
+
+iquery -anq "remove(ndvi_gridded)" > /dev/null 2>&1
+
+echo "Gridding NDVI results..."
+time iquery -anq "
+  store(
+    thin(
+      window(
+        merge(ndvi_points, ndvi_grid_centers),
+        $lonBlurWindowSize,
+        $latBlurWindowSize,
+        max(ndvi) as ndvi
+      ),
+      $lonCellsPerTile / 2, $lonCellsPerTile,
+      $latCellsPerTile / 2, $latCellsPerTile
+    ),
+    ndvi_gridded
+  )"
+echo "Done."
+
+iquery -anq "remove(ndvi_points)" > /dev/null 2>&1
+iquery -anq "remove(ndvi_grid_centers)" > /dev/null 2>&1

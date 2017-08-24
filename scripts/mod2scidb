@@ -1,0 +1,25 @@
+#!/bin/bash
+
+DIR=$(pwd)
+echo "In Folder: "$DIR
+for IN_FILE in $*
+do
+  echo "*** Loading "$IN_FILE" ("$(date)")..."
+
+  START=$(date +%s.%N)
+  mod2csv -q $IN_FILE -o ~/csv
+  STOP=$(date +%s.%N)
+  ELAPSED=$(echo "$STOP - $START" | bc)
+  echo "MOD2CSV,"$IN_FILE","$ELAPSED
+
+  cd ~/csv
+  csv2dlf ~/dlf 3 9 *
+
+  cd ~/dlf/3i
+  load2scidb *
+
+  cd $DIR
+  rm -r ~/csv/* > /dev/null 2>&1
+  rm -r ~/dlf/* > /dev/null 2>&1
+  echo "*** Loaded "$IN_FILE" ("$(date)")."
+done

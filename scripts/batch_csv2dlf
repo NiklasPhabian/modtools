@@ -1,0 +1,33 @@
+#!/bin/bash
+
+MAX_TASKS=9
+
+cd ~/csv/1km
+OUT_FOLDER=~/dlf/1km
+mkdir $OUT_FOLDER > /dev/null 2>&1
+for ((i=1;i<=5;i++))
+do
+	csv2dlf $OUT_FOLDER $i $MAX_TASKS MOD* > $OUT_FOLDER/$i"i.log"
+	sleep 60;
+done
+
+
+cd ~/csv/hkm
+OUT_FOLDER=~/dlf/hkm
+mkdir $OUT_FOLDER > /dev/null 2>&1
+for ((i=1;i<=5;i++))
+do
+        csv2dlf $OUT_FOLDER $i $MAX_TASKS MOD* > $OUT_FOLDER/$i"i.log"
+        sleep 60;
+done
+
+
+cd ~/csv/qkm
+OUT_FOLDER=~/dlf/qkm
+mkdir $OUT_FOLDER > /dev/null 2>&1
+for ((i=1;i<=5;i++))
+do
+        csv2dlf $OUT_FOLDER $i $MAX_TASKS MOD* > $OUT_FOLDER/$i"i.log"
+        sleep 60;
+done
+

@@ -1,0 +1,92 @@
+#!/bin/bash
+
+BENCHMARK_DIR=/modtools/queries
+RGB_DIR=$BENCHMARK_DIR/rgb
+NDVI_DIR=$BENCHMARK_DIR/ndvi
+NDSI_DIR=$BENCHMARK_DIR/ndsi
+
+# Run RGB Benchmarks
+echo "********** RGB_10 (Run 1) **********"
+$RGB_DIR/rgb_10.sh
+sleep 15
+echo "********** RGB_10 (Run 2) **********"
+$RGB_DIR/rgb_10.sh
+sleep 15
+echo "********** RGB_10 (Run 3) **********"
+$RGB_DIR/rgb_10.sh
+sleep 15
+echo "********** RGB_20 (Run 1) **********"
+$RGB_DIR/rgb_20.sh
+sleep 15
+echo "********** RGB_20 (Run 2) **********"
+$RGB_DIR/rgb_20.sh
+sleep 15
+echo "********** RGB_20 (Run 3) **********"
+$RGB_DIR/rgb_20.sh
+sleep 15
+echo "********** RGB_30 (Run 1) **********"
+$RGB_DIR/rgb_30.sh
+sleep 15
+echo "********** RGB_30 (Run 2) **********"
+$RGB_DIR/rgb_30.sh
+sleep 15
+echo "********** RGB_30 (Run 3) **********"
+$RGB_DIR/rgb_30.sh
+sleep 15
+
+# Run NDVI Benchmarks
+echo "********** NDVI_10 (Run 1) **********"
+$NDVI_DIR/ndvi_10.sh
+sleep 15
+echo "********** NDVI_10 (Run 2) **********"
+$NDVI_DIR/ndvi_10.sh
+sleep 15
+echo "********** NDVI_10 (Run 3) **********"
+$NDVI_DIR/ndvi_10.sh
+sleep 15
+echo "********** NDVI_20 (Run 1) **********"
+$NDVI_DIR/ndvi_20.sh
+sleep 15
+echo "********** NDVI_20 (Run 2) **********"
+$NDVI_DIR/ndvi_20.sh
+sleep 15
+echo "********** NDVI_20 (Run 3) **********"
+$NDVI_DIR/ndvi_20.sh
+sleep 15
+echo "********** NDVI_30 (Run 1) **********"
+$NDVI_DIR/ndvi_30.sh
+sleep 15
+echo "********** NDVI_30 (Run 2) **********"
+$NDVI_DIR/ndvi_30.sh
+sleep 15
+echo "********** NDVI_30 (Run 3) **********"
+$NDVI_DIR/ndvi_30.sh
+sleep 15
+
+# Run NDSI Benchmarks
+echo "********** NDSI_10 (Run 1) **********"
+$NDSI_DIR/ndsi_10.sh
+sleep 15
+echo "********** NDSI_10 (Run 2) **********"
+$NDSI_DIR/ndsi_10.sh
+sleep 15
+echo "********** NDSI_10 (Run 3) **********"
+$NDSI_DIR/ndsi_10.sh
+sleep 15
+echo "********** NDSI_20 (Run 1) **********"
+$NDSI_DIR/ndsi_20.sh
+sleep 15
+echo "********** NDSI_20 (Run 2) **********"
+$NDSI_DIR/ndsi_20.sh
+sleep 15
+echo "********** NDSI_20 (Run 3) **********"
+$NDSI_DIR/ndsi_20.sh
+sleep 15
+echo "********** NDSI_30 (Run 1) **********"
+$NDSI_DIR/ndsi_30.sh
+sleep 15
+echo "********** NDSI_30 (Run 2) **********"
+$NDSI_DIR/ndsi_30.sh
+sleep 15
+echo "********** NDSI_30 (Run 3) **********"
+$NDSI_DIR/ndsi_30.sh
