@@ -1,0 +1,26 @@
+2017-10-17 17:52:39,242 [INFO] main :: Granule.java:84 (main) :: Processing mod02 file: ../../test_data/MOD021KM.A2017234.0020.006.2017234132624.hdf
+2017-10-17 17:52:39,723 [WARN] main :: Granule.java:216 (findMod03File) :: Could not find a mod03 file in ../../test_data with prefix matching MOD03.A2017234.0020.006
+2017-10-17 17:52:39,724 [ERROR] main :: Granule.java:204 (open) :: ncsa.hdf.hdflib.HDFException: File does not exist -- /home/griessbaum/Dropbox/UCSB/modtools/mod2csv/bin/MOD03.A2017234.0020.006.2017234073239.hdf
+	at ncsa.hdf.object.h4.H4File.open(H4File.java:264)
+	at org.scidb.modis.Granule.openFile(Granule.java:339)
+	at org.scidb.modis.Granule.open(Granule.java:202)
+	at org.scidb.modis.Granule.main(Granule.java:85)
+
+2017-10-17 17:52:39,725 [ERROR] main :: Granule.java:95 (main) :: java.lang.Exception: Failed to open ancillary mod03 geodata file: MOD03.A2017234.0020.006.2017234073239.hdf
+	at org.scidb.modis.Granule.open(Granule.java:205)
+	at org.scidb.modis.Granule.main(Granule.java:85)
+
+2017-10-24 19:13:11,694 [INFO] main :: Granule.java:84 (main) :: Processing mod02 file: /raid/scratch/griessbaum/loaddata/hdf/*
+2017-10-24 19:13:11,706 [ERROR] main :: Granule.java:95 (main) :: ncsa.hdf.hdflib.HDFException: File does not exist -- /raid/scratch/griessbaum/loaddata/hdf/*
+	at ncsa.hdf.object.h4.H4File.open(H4File.java:264)
+	at org.scidb.modis.Granule.openFile(Granule.java:345)
+	at org.scidb.modis.Granule.open(Granule.java:190)
+	at org.scidb.modis.Granule.main(Granule.java:85)
+
+2017-10-24 19:13:40,921 [INFO] main :: Granule.java:84 (main) :: Processing mod02 file: /raid/scratch/griessbaum/loaddata/hdf/*
+2017-10-24 19:13:40,930 [ERROR] main :: Granule.java:95 (main) :: ncsa.hdf.hdflib.HDFException: File does not exist -- /raid/scratch/griessbaum/loaddata/hdf/*
+	at ncsa.hdf.object.h4.H4File.open(H4File.java:264)
+	at org.scidb.modis.Granule.openFile(Granule.java:346)
+	at org.scidb.modis.Granule.open(Granule.java:190)
+	at org.scidb.modis.Granule.main(Granule.java:85)
+
