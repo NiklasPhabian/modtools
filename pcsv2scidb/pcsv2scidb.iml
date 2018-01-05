@@ -4,11 +4,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/lib" type="java-resource" />
     </content>
-    <orderEntry type="library" exported="" name="lib" level="project" />
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" exported="" name="lib-hdf-2.7" level="project" />
+    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

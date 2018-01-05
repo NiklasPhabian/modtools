@@ -7,6 +7,7 @@
       <root url="jar://$PROJECT_DIR$/lib/jhdf4obj.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/PIRL-2.3.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib-hdf-2.7.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

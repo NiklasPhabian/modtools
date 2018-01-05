@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pcsv2scidb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/pcsv2scidb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
