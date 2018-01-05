@@ -1,2 +1,0 @@
-#!/bin/bash
-java -Xms512m -Xmx4096m -server -jar /modtools/pcsv2scidb.jar "$@"

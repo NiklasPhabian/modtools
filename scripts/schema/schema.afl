@@ -1,4 +1,4 @@
-CREATE IMMUTABLE EMPTY ARRAY platforms
+CREATE ARRAY platforms
 <
 description : string
 >
@@ -7,7 +7,7 @@ platform_id = 0 : 1, 1, 0
 ];
 
 
-CREATE IMMUTABLE EMPTY ARRAY resolutions
+CREATE ARRAY resolutions
 <
 description : string
 >
@@ -16,7 +16,7 @@ resolution_id = 0 : 2, 1, 0
 ];
 
 
-CREATE IMMUTABLE EMPTY ARRAY bands
+CREATE ARRAY bands
 <
 description : string
 >
@@ -25,7 +25,7 @@ band_id = 0 : 37, 38, 0
 ];
 
 
-CREATE IMMUTABLE EMPTY ARRAY granule_metadata
+CREATE ARRAY granule_metadata
 <
 scans : uint8,
 track_measurements : uint16,
@@ -41,7 +41,7 @@ resolution_id = 0 : 2, 1, 0
 ];
 
 
-CREATE IMMUTABLE EMPTY ARRAY band_metadata
+CREATE ARRAY band_metadata
 <
 radiance_scale : double,
 radiance_offset : float, 
@@ -60,7 +60,7 @@ band_id = 0 : 37, 38, 0
 ];
 
 
-CREATE IMMUTABLE EMPTY ARRAY geodata
+CREATE ARRAY geodata
 <
 track_index : int16,
 scan_index : int16,
@@ -81,7 +81,7 @@ resolution_id = 0 : 2, 1, 0
 ];
 
 
-CREATE IMMUTABLE EMPTY ARRAY band_1_measurements
+CREATE ARRAY band_1_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -97,7 +97,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_2_measurements
+CREATE ARRAY band_2_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -113,7 +113,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_3_measurements
+CREATE ARRAY band_3_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -129,7 +129,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_4_measurements
+CREATE ARRAY band_4_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -145,7 +145,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_5_measurements
+CREATE ARRAY band_5_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -161,7 +161,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_6_measurements
+CREATE ARRAY band_6_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -177,7 +177,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_7_measurements
+CREATE ARRAY band_7_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -193,7 +193,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_8_measurements
+CREATE ARRAY band_8_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -209,7 +209,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_9_measurements
+CREATE ARRAY band_9_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -225,7 +225,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_10_measurements
+CREATE ARRAY band_10_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -241,7 +241,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_11_measurements
+CREATE ARRAY band_11_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -257,7 +257,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_12_measurements
+CREATE ARRAY band_12_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -273,7 +273,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_13lo_measurements
+CREATE ARRAY band_13lo_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -289,7 +289,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_13hi_measurements
+CREATE ARRAY band_13hi_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -305,7 +305,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_14lo_measurements
+CREATE ARRAY band_14lo_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -321,7 +321,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_14hi_measurements
+CREATE ARRAY band_14hi_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -337,7 +337,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_15_measurements
+CREATE ARRAY band_15_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -353,7 +353,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_16_measurements
+CREATE ARRAY band_16_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -369,7 +369,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_17_measurements
+CREATE ARRAY band_17_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -385,7 +385,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_18_measurements
+CREATE ARRAY band_18_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -401,7 +401,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_19_measurements
+CREATE ARRAY band_19_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -417,7 +417,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_20_measurements
+CREATE ARRAY band_20_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -433,7 +433,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_21_measurements
+CREATE ARRAY band_21_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -449,7 +449,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_22_measurements
+CREATE ARRAY band_22_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -465,7 +465,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_23_measurements
+CREATE ARRAY band_23_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -481,7 +481,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_24_measurements
+CREATE ARRAY band_24_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -497,7 +497,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_25_measurements
+CREATE ARRAY band_25_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -513,7 +513,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_26_measurements
+CREATE ARRAY band_26_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -529,7 +529,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_27_measurements
+CREATE ARRAY band_27_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -545,7 +545,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_28_measurements
+CREATE ARRAY band_28_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -561,7 +561,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_29_measurements
+CREATE ARRAY band_29_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -577,7 +577,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_30_measurements
+CREATE ARRAY band_30_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -593,7 +593,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_31_measurements
+CREATE ARRAY band_31_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -609,7 +609,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_32_measurements
+CREATE ARRAY band_32_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -625,7 +625,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_33_measurements
+CREATE ARRAY band_33_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -641,7 +641,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_34_measurements
+CREATE ARRAY band_34_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -657,7 +657,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_35_measurements
+CREATE ARRAY band_35_measurements
 <
 si_value : uint16,
 radiance : double,
@@ -673,7 +673,7 @@ platform_id = 0 : 1, 1, 0,
 resolution_id = 0 : 2, 1, 0 
 ];
 
-CREATE IMMUTABLE EMPTY ARRAY band_36_measurements
+CREATE ARRAY band_36_measurements
 <
 si_value : uint16,
 radiance : double,
