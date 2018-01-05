@@ -31,7 +31,7 @@ public class BetterProcessor {
         int linesToSkip = Integer.parseInt(args[3]);
         String inputFile = args[4];
         String outputFile = args[5];
-        Processor p = new Processor(scidbFolder, numInstances, chunkSize, linesToSkip, inputFile, outputFile);
+        BetterProcessor p = new BetterProcessor(scidbFolder, numInstances, chunkSize, linesToSkip, inputFile, outputFile);
         p.process();
     }
 
@@ -77,7 +77,7 @@ public class BetterProcessor {
                         chunkWrittenFlags[instanceId] = true;
                     }
                     output.write("{");
-                    output.write(chunkNumber * chunkSize);
+                    output.write(Integer.toString(chunkNumber * chunkSize));
                     output.write("}[");
                     lineWrittenFlags[instanceId] = false;
                 }

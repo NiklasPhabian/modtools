@@ -44,7 +44,7 @@ public class Granule {
         try {
             String osName = System.getProperty("os.name");
             if ("Linux".equals(osName)) {
-                Logger.getRootLogger().addAppender(getFileAppender("/var/log/mod2csv.log"));
+                Logger.getRootLogger().addAppender(getFileAppender("../log/mod2csv.log"));
             }
             int numArgs = args.length;
             String baseOutputFolder = System.getProperty("user.dir");
@@ -330,6 +330,7 @@ public class Granule {
     private FileFormat openFile(String filePath) throws Exception {
         FileFormat hdf4Format = FileFormat.getFileFormat(FileFormat.FILE_TYPE_HDF4);
         if (hdf4Format == null) {
+            // Note: this is not about the ncsa.jhdf library, but about the libjhdf native library
             throw new Exception("Could not find HDF4 FileFormat (libjhdf native library is probably not in java library path).");
         }
         FileFormat file = hdf4Format.createInstance(filePath, FileFormat.READ);

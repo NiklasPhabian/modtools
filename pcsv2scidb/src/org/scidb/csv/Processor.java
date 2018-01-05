@@ -19,7 +19,7 @@ public class Processor {
     private boolean[] chunkWrittenFlags;
     private boolean[] lineWrittenFlags;
 
-    /*
+
     public static void main(String[] args) {
         if (args.length != 6) {
             printUsage();
@@ -34,7 +34,7 @@ public class Processor {
         Processor p = new Processor(scidbFolder, numInstances, chunkSize, linesToSkip, inputFile, outputFile);
         p.process();
     }
-    */
+
 
     public static void printUsage() {
         System.out.println("USAGE: pcsv2scidb <scidbFolder> <numInstances> <chunkSize> <linesToSkip> <inputFile> <outputFile>");
